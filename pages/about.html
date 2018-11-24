@@ -1,0 +1,19 @@
+{% extends "templates/partials/base.html" %}
+
+{% block title %}
+  {{ cms.about.name }} - {% parent %}
+{% endblock %}
+
+{% block content %}
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="{{ cms.about.image.url }}">
+    </div>
+  </div>
+  <article class="container">
+    <h1>
+      {{ cms.about.name }}
+    </h1>
+      {{ cms.about.text|safe }}
+  </article>
+{% endblock %}

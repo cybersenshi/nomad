@@ -1,0 +1,91 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}
+  {% parent %} - {{ cms.contact.name }}
+{% endblock %}
+
+{% block content %}
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="{{ cms.about.image.url }}">
+  </div>
+</div>
+<article class="container">
+  <h1>
+    {{ cms.contact.name }}
+  </h1>
+  <ul>
+  <form action="https://formspree.io/lh-chan@mechapilot.org">
+    <input type="hidden" name="_subject" value="New submission!" />
+    <li class="input-field">
+      <input id="name" type="text" class="validate" required>
+      <label for="name">Name</label>
+    </li>
+    <li class="input-field">
+      <input id="company" type="text" class="validate">
+      <label for="company">Company</label>
+    </li>
+    <li class="input-field">
+      <input id="phone" type="tel" class="validate" required>
+      <label for="phone">Phone</label>
+    </li>
+    <li class="input-field">
+      <input id="email" type="email" name="_replyto" class="validate" required>
+      <label for="email">Email</label>
+    </li>
+    <li class="input-field">
+      <input id="event_date" type="date" class="datepicker">
+      <label for="event_date">
+        Event Date
+      </label>
+    </li>
+    <li class="input-field">
+      <input id="event_location" type="text" class="validate">
+      <label for="event_location">
+        Event Location
+      </label>
+    </li>
+    <li class="input-field">
+      <input id="expected_attendance" type="text" class="validate">
+      <label for="expected_attendance">
+        Expected Attendance
+      </label>
+    </li>
+    <li class="input-field">
+      <textarea id="event_desc" class="materialize-textarea"></textarea>
+      <label for="event_desc">
+        Event Description
+      </label>
+    </li>
+    <li class="input-field">
+      <select multiple>
+        <option value="" disabled selected>I know I need:</option>
+        <option value="1">Audio</option>
+        <option value="2">Decor</option>
+        <option value="3">Lighting</option>
+        <option value="4">Sound</option>
+        <option value="5">Staging</option>
+        <option value="6">Video</option>
+      </select>
+      <label>
+        I know I need:
+      </label>
+    </li>
+    <li class="input-field">
+      <select multiple>
+        <option value="" disabled selected>How did you hear about Nomad?</option>
+        <option value="1">Internet Search</option>
+        <option value="2">Newspaper</option>
+        <option value="3">Referral</option>
+        <option value="4">Social Media</option>
+      </select>
+      <label>How did you hear about Nomad?</label>
+    </li>
+    <li>
+      <button type="button" name="Submit" class="btn">
+        Submit
+      </button>
+    </li>
+  </form>
+</ul>
+</article>
+{% endblock %}

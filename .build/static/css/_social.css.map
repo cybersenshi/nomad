@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,GAAG;EACD,gBAAgB,EAAE,OAAO;;AAE3B,KAAK;EACH,gBAAgB,EAAE,OAAO;;AAE3B,MAAM;EACJ,gBAAgB,EAAE,OAAO;;AAE3B,KAAK;EACH,gBAAgB,EAAE,OAAO",
+"sources": ["_social.sass"],
+"names": [],
+"file": "_social.css"
+}

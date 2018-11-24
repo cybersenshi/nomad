@@ -1,0 +1,48 @@
+<ul id="about-drop" class="dropdown-content">
+  <li>
+    <a href="{{ url('about') }}">
+      Event Systems
+    </a>
+  </li>
+  <li>
+    <a href="{{ url('team') }}">
+      Team
+    </a>
+  </li>
+  <li>
+    <a href="{{ url('employment') }}">
+      Employment
+    </a>
+  </li>
+</ul>
+<nav>
+ <div class="nav-wrapper">
+   <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <li>
+      <a href="/">
+          Home
+        </a>
+    </li>
+    <li>
+      <a href="{{ url('portfolio') }}">
+          Portfolio
+        </a>
+    </li>
+    <li>
+      <a href="{{ url('services') }}">
+        Services
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-trigger" href="#!" data-target="about-drop">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="{{ url('contact') }}">
+        Contact
+      </a>
+     </li>
+   </ul>
+ </div>
+</nav>
