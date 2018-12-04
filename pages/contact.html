@@ -6,7 +6,7 @@
 {% block content %}
 <div class="parallax-container">
   <div class="parallax">
-    <img src="{{ cms.about.image.url }}">
+    <img src="{{ cms.about.image.url }}" alt="">
   </div>
 </div>
 <article class="container">
@@ -14,14 +14,14 @@
     {{ cms.contact.name }}
   </h1>
   <ul>
-  <form action="https://formspree.io/lh-chan@mechapilot.org">
-    <input type="hidden" name="_subject" value="New submission!" />
+  <form method="POST" action="https://formspree.io/lh-chan@mechapilot.org">
+    <input type="hidden" name="Subject" value="Nomad Site Contact Form" />
     <li class="input-field">
-      <input id="name" type="text" class="validate" required>
+      <input id="name" type="text" name="name" class="validate" required>
       <label for="name">Name</label>
     </li>
     <li class="input-field">
-      <input id="company" type="text" class="validate">
+      <input id="company" type="text" name="company" class="validate">
       <label for="company">Company</label>
     </li>
     <li class="input-field">
@@ -29,59 +29,59 @@
       <label for="phone">Phone</label>
     </li>
     <li class="input-field">
-      <input id="email" type="email" name="_replyto" class="validate" required>
+      <input id="email" type="email" name="Email" class="validate" required>
       <label for="email">Email</label>
     </li>
     <li class="input-field">
-      <input id="event_date" type="date" class="datepicker">
+      <input id="event_date" type="date" name="Event Date" class="datepicker">
       <label for="event_date">
         Event Date
       </label>
     </li>
     <li class="input-field">
-      <input id="event_location" type="text" class="validate">
+      <input id="event_location" type="text" name="Event Location">
       <label for="event_location">
         Event Location
       </label>
     </li>
     <li class="input-field">
-      <input id="expected_attendance" type="text" class="validate">
+      <input id="expected_attendance" type="text" name="Expected Attendance">
       <label for="expected_attendance">
         Expected Attendance
       </label>
     </li>
     <li class="input-field">
-      <textarea id="event_desc" class="materialize-textarea"></textarea>
+      <textarea id="event_desc" name="Event Description" class="materialize-textarea"></textarea>
       <label for="event_desc">
         Event Description
       </label>
     </li>
     <li class="input-field">
-      <select multiple>
+      <select multiple name="I Know I Need">
         <option value="" disabled selected>I know I need:</option>
-        <option value="1">Audio</option>
-        <option value="2">Decor</option>
-        <option value="3">Lighting</option>
-        <option value="4">Sound</option>
-        <option value="5">Staging</option>
-        <option value="6">Video</option>
+        <option value="Audio">Audio</option>
+        <option value="Decor">Decor</option>
+        <option value="Lighting">Lighting</option>
+        <option value="Sound">Sound</option>
+        <option value="Staging">Staging</option>
+        <option value="Video">Video</option>
       </select>
       <label>
         I know I need:
       </label>
     </li>
     <li class="input-field">
-      <select multiple>
+      <select multiple name="How Did You Hear About Nomad?">
         <option value="" disabled selected>How did you hear about Nomad?</option>
-        <option value="1">Internet Search</option>
-        <option value="2">Newspaper</option>
-        <option value="3">Referral</option>
-        <option value="4">Social Media</option>
+        <option value="Internet Search">Internet Search</option>
+        <option value="Newspaper">Newspaper</option>
+        <option value="Referral">Referral</option>
+        <option value="Social Media">Social Media</option>
       </select>
       <label>How did you hear about Nomad?</label>
     </li>
     <li>
-      <button type="button" name="Submit" class="btn">
+      <button type="submit" name="Submit" class="btn" >
         Submit
       </button>
     </li>

@@ -16,10 +16,12 @@ $bodyfont: 'Josefin Sans', sans-serif
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
 
 @import 'social'
-@import 'tempus.css'
 
 html
   font-family: $bodyfont
+
+body
+  font-size: large
 
 .box
   display: flex
@@ -56,19 +58,31 @@ nav
   background-color: transparent
   box-shadow: none
 
-nav ul
-  background-color: $nomadgreen
+.mainnav ul
+  background-color: none
   font-weight: 800
-  border-bottom-left-radius: 15px
 
-nav ul:not(.browserdefault)
-  padding-left: 15px
-
-nav ul a
+.mainnav ul a
   text-transform: uppercase
 
+.mainnav li:first-child
+  padding-left: 15px
+
+.mainnav li
+  background-color: $nomadgreen
+
+ul.dropdown-content
+  padding-left: 0px
+  border-radius: 0px
+
+.dropdown-content li>a, .dropdown-content li>span
+  background-color: $white
+
+article
+  padding-bottom: 2em
+
 article h1
-  margin: -6px
+  margin-top: -6px
   max-width: 50%
   padding-top: 10px
   padding-left: 30px
@@ -86,8 +100,77 @@ header address
   font-size: 2rem
   line-height: 2.3rem
 
+.quote
+  width: 85%
+  padding-top: 4em
+  padding-bottom: 4em
+  text-align: right
+
+.quote h4
+  font-size: 2rem
+  font-style: italic
+
+.sidebyside
+  display: grid
+  grid-template-columns: auto auto
+  grid-column-gap: 3em
+  padding-top: 2em
+
+.sidebarfixed
+  grid-template-columns: 30% auto
+
+.stickbar
+  position: sticky
+  top: 1em
+
+.collection .collection-item.active, .table-of-contents a.active
+  background-color: $white
+  border-left: 4px solid $nomadgreen
+  color: $black
+
+.collection a.collection-item
+  color: $nomadgreen
+
+.table-of-contents a
+  height: unset
+
+.table-of-contents a:hover
+  border-left: 4px solid $nomadgreen
+
+.stickbar>.collection-item
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+
+ul.gearlist>li
+  margin-left: 3em
+
+ul.gearlist>li:before
+  font-family: 'FontAwesome'
+  content: '\f0da'
+  margin: 0 5px 0 -15px
+  color: $nomadgreen
+
+hr
+  height: 300px
+  color: transparent
+  border-style: none
+
+.card
+  box-shadow: none
+
+.card .card-image .card-title
+  padding: 0
+
+.card-title h3
+  padding: 0.5em
+  font-family: $headfont
+  color: $black
+  background-color: $white
+
 .btn
   background-color: $nomadgreen
+  border-radius: 0px
+  box-shadow: none
 
 .parallax-container
   height: 300px
@@ -103,23 +186,37 @@ input[type=text]:not(.browser-default):focus:not([readonly])
   box-shadow: 0 1px 0 0 $nomadgreen
 
 footer
-  padding: 1rem
+  padding: 1em
   background-color: $nomadgreen
   color: $white
 
 footer address
   font-style: normal
 
+.affilate
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  flex-basis: 100%
+  align-items: center
+  align-content: center
+  justify-content: space-around
+
+.embedly-embed
+  width: 350px
+
+.where
+  padding: 2em
+
 .sharenav
   position: fixed
-  bottom: 0px
+  bottom: 20%
   right: 0px
   z-index: 80
 
 .sharenav
   display: flex
   flex-direction: column
-  margin-bottom: 6rem
 
 .sharenav li
   margin-left: 1em

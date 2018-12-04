@@ -14,6 +14,19 @@
     <h1>
       {{ cms.about.name }}
     </h1>
-      {{ cms.about.text|safe }}
+    <div class="sidebyside">
+      <div>
+        {{ cms.about.text|safe }}
+      </div>
+      <div class="">
+        {{ cms.about.location_map.html|safe }}
+        <span class="where">
+          <address>
+            3211 Colvin St.<br>
+            Alexandria, VA 22314
+          </address>
+          9:30 AM - 6 PM M-F
+        </span>
+      </div>
   </article>
 {% endblock %}

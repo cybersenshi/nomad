@@ -1,43 +1,39 @@
-{# ------------------------------------------------------- #}
-
-{# YOUR HOMEPAGE #}
-
-{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
-{# http://paularmstrong.github.io/swig/docs/tags/ #}
-
-{# Learn about calling data into Webhook pages here: #}
-{# http://www.webhook.com/docs/template-rules-and-filters/ #}
-
-{# ------------------------------------------------------- #}
-
-{# Confused what extends and blocks do? Watch a primer: #}
-{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
 {% extends "templates/partials/base.html" %}
 
-{# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
 {% block title %}
   {% parent %}
 {% endblock %}
 
 {% block content %}
 
-  <h1>Hello world!</h1>
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="{{ cms.main.header_image.url }}" alt="">
+  </div>
+</div>
 
-  <p>This is your homepage, located at /pages/index.html.</p>
+<div class="container sidebyside">
+  <span>
+    {{ cms.main.hero_left|safe }}
+  </span>
+  <span>
+    {{ cms.main.hero_right|safe }}
+  </span>
+</div>
 
-  <p><a href="/cms/">Looking for the CMS?</a></p>
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="{{ cms.main.header_image.url }}" alt="">
+  </div>
+</div>
 
-  {# If you have at least content page type, we show a list. #}
-  {% if cms_types|size !== 0 %}
-
-    <h3>Content types you've created in the CMS so far.</h3>
-
-    <ul>
-    {% for type in cms_types %}
-      <li><a href="{{ url(type) }}">{{ type.name }}</a></li>
-    {% endfor %}
-    </ul>
-
-  {% endif %}
+<div class="container quote">
+  <h4>
+    "I can't thank you enough for all that you did last night - it exceeded my expectations!!! Absolutely awesome. Everyone was talking about the lighting and "images" , including our director. And the fireworks - perfect! They loved it."
+  </h4>
+  - Tina Karl, Special Events Manager, Natural History Museum
+  {{ cms.testimonial.quote }}
+  {{ cms.testimonial.name }}
+</div>
 
 {% endblock %}

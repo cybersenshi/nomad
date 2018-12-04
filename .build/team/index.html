@@ -11,7 +11,7 @@
         Nomad Event Systems
        - 
     </title>
-    <meta name="description" content="Built with Webhook.">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
     <link rel="shortcut icon" href="/static/ico/favicon.ico" type="image/x-icon">
@@ -30,6 +30,7 @@
 
     <!-- build:css /static/css/minified.css -->
     <link rel="stylesheet" href="/static/css/main.css"/>
+    <link rel="stylesheet" href="/static/css/tempus.css">
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
     <!-- endbuild -->
 
@@ -38,9 +39,15 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('.parallax').parallax();
-        $(".dropdown-trigger").dropdown();
-        $('.datepicker').datepicker();
+        $(".dropdown-trigger").dropdown({
+          coverTrigger: false,
+          constrainWidth: false,
+        });
+        $('.datepicker').datepicker({
+          showClearBtn: true,
+        });
         $('select').formSelect();
+        $('.scrollspy').scrollSpy();
       });
     </script>
 
@@ -54,7 +61,7 @@
 <ul id="about-drop" class="dropdown-content">
   <li>
     <a href="/about/">
-      Event Systems
+      Company
     </a>
   </li>
   <li>
@@ -68,7 +75,7 @@
     </a>
   </li>
 </ul>
-<nav>
+<nav class="mainnav">
  <div class="nav-wrapper">
    <ul id="nav-mobile" class="right hide-on-med-and-down">
     <li>
@@ -76,21 +83,26 @@
           Home
         </a>
     </li>
-    <li>
+    <!--<li>
       <a href="">
           Portfolio
         </a>
-    </li>
+    </li>-->
     <li>
-      <a href="">
+      <a href="/services/">
         Services
       </a>
     </li>
     <li>
-      <a class="dropdown-trigger" href="#!" data-target="about-drop">
+      <a href="/about/">
         About
       </a>
     </li>
+    <!--<li>
+      <a class="dropdown-trigger" href="#!" data-target="about-drop">
+        About
+      </a>
+    </li>-->
     <li>
       <a href="/contact/">
         Contact
@@ -108,13 +120,13 @@
 </form>-->
 <div class="box">
  <h1>
-   <a href="#" class="brand-logo">
+   <a href="/" class="brand-logo">
      <img src="/static/images/nomadlogo.svg" title="Nomad Event Systems" alt="Nomad Event Systems" width="300px">
    </a>
  </h1>
  <h2>
    <address>
-     Washington D.C.
+     Alexandria, VA &#183; Washington D.C.
      <br>
      <a href="+17033542939">
        703 &#183; 354 &#183; 2939
@@ -152,28 +164,38 @@
 
   </main>
       
-        <footer class="box">
-  <address>
-     3211 Colvin St.<br>
-     Alexandria, VA 22314
-  </address>
+        <footer>
+  <ul class="affilate">
+    <li>
+      <img src="/static/images/jc-footer-logo-2.png" alt="">
+    </li>
+    <li>
+      <img src="/static/images/jc-footer-logo-3.png" alt="">
+    </li>
+    <li>
+      <img src="/static/images/jc-footer-logo-4.png" alt="">
+    </li>
+    <li>
+      <img src="/static/images/jc-footer-logo-5.png" alt="">
+    </li>
+  </ul>
 </footer>
 
       
       
         <ul class="sharenav center-align">
     <li class="fb">
-        <a href="https://www.facebook.com/panoramic.mgmt/">
+        <a href="https://www.facebook.com/DCEventProduction/">
             <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
         </a>
     </li>
     <li class="twit">
-        <a href="https://twitter.com/panoramicmgmt">
+        <a href="https://twitter.com/nomadevents">
             <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
         </a>
     </li>
     <li class="insta">
-        <a href="http://https//www.instagram.com/panoramic.mgmt/">
+        <a href="https://www.instagram.com/nomadeventsystems/">
             <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
         </a>
     </li>

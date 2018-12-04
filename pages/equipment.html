@@ -1,0 +1,21 @@
+{% extends "templates/partials/base.html" %}
+
+{% block title %}
+  {{ cms.equipment.name }} - {% parent %}
+{% endblock %}
+
+{% block content %}
+  <h1>{{ cms.equipment.name }}</h1>
+
+        <strong>Sound: </strong>
+        {# Loop of your Repeatable Form items. Remember, you can sort the order in your CMS if you need. #}
+        <ul>
+        {% for row in cms.equipment.sound %}
+            <li>
+              <strong>Item: </strong>
+              {{ row.item }}
+            </li>
+        {% endfor %}
+        </ul>
+
+{% endblock %}
