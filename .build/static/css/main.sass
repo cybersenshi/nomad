@@ -23,6 +23,13 @@ html
 body
   font-size: large
 
+a
+  color: $nomadgreen
+  opacity: 0.8
+
+a:hover
+  opacity: 1
+
 .box
   display: flex
   flex-direction: row
@@ -57,6 +64,10 @@ h2 a:hover
 nav
   background-color: transparent
   box-shadow: none
+
+.mainnav a
+  color: $white
+  opacity: 1
 
 .mainnav ul
   background-color: none
@@ -186,6 +197,7 @@ input[type=text]:not(.browser-default):focus:not([readonly])
   box-shadow: 0 1px 0 0 $nomadgreen
 
 footer
+  position: relative
   padding: 1em
   background-color: $nomadgreen
   color: $white
@@ -209,14 +221,16 @@ footer address
   padding: 2em
 
 .sharenav
-  position: fixed
+  display: flex
+  flex-direction: column
+  position: absolute
   bottom: 20%
   right: 0px
   z-index: 80
 
-.sharenav
-  display: flex
-  flex-direction: column
+.sharenav a
+  color: $white
+  opacity: 1
 
 .sharenav li
   margin-left: 1em

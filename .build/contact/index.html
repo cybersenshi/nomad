@@ -153,17 +153,18 @@
   </h1>
   <ul>
   <form method="POST" action="https://formspree.io/events@nomadevents.com">
-    <input type="hidden" name="-subject" value="Nomad Site Contact Form" />
+    <input type="hidden" name="_subject" value="Nomad Site Contact Form">
+    <input type="hidden" name="_next" value="http://nomadevents.com/contactlanding">
     <li class="input-field">
-      <input id="name" type="text" name="name" class="validate" required>
+      <input id="name" type="text" name="Name" class="validate" required>
       <label for="name">Name</label>
     </li>
     <li class="input-field">
-      <input id="company" type="text" name="company" class="validate">
+      <input id="company" type="text" name="Company" class="validate">
       <label for="company">Company</label>
     </li>
     <li class="input-field">
-      <input id="phone" type="tel" class="validate" required>
+      <input id="phone" type="tel" name="Phone" class="validate" required>
       <label for="phone">Phone</label>
     </li>
     <li class="input-field">
@@ -230,25 +231,8 @@
   </main>
       
         <footer>
-  <ul class="affilate">
-    <li>
-      <img src="/static/images/jc-footer-logo-2.png" alt="">
-    </li>
-    <li>
-      <img src="/static/images/jc-footer-logo-3.png" alt="">
-    </li>
-    <li>
-      <img src="/static/images/jc-footer-logo-4.png" alt="">
-    </li>
-    <li>
-      <img src="/static/images/jc-footer-logo-5.png" alt="">
-    </li>
-  </ul>
-</footer>
-
-      
-      
-        <ul class="sharenav center-align">
+  
+    <ul class="sharenav center-align">
     <li class="fb">
         <a href="https://www.facebook.com/DCEventProduction/">
             <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
@@ -271,9 +255,24 @@
     </li>
 </ul>
 
+  
+  <ul class="affilate">
+    <li>
+      <img src="/static/images/jc-footer-logo-2.png" alt="">
+    </li>
+    <li>
+      <img src="/static/images/jc-footer-logo-3.png" alt="">
+    </li>
+    <li>
+      <img src="/static/images/jc-footer-logo-4.png" alt="">
+    </li>
+    <li>
+      <img src="/static/images/jc-footer-logo-5.png" alt="">
+    </li>
+  </ul>
+</footer>
+
       
-
-
 
       
       

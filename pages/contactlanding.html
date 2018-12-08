@@ -1,0 +1,18 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}
+  {% parent %} - {{ cms.contactlanding.name }}
+{% endblock %}
+{% block content %}
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="{{ cms.about.image.url }}" alt="">
+  </div>
+</div>
+<article class="container">
+  <h1>
+    {{ cms.contactlanding.name }}
+  </h1>
+
+    {{ cms.contactlanding.text|safe }}
+</article>
+{% endblock %}
