@@ -36,28 +36,19 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.parallax').parallax();
-        $(".dropdown-trigger").dropdown({
-          coverTrigger: false,
-          constrainWidth: false,
-        });
-        $('.datepicker').datepicker({
-          showClearBtn: true,
-        });
-        $('select').formSelect();
-        $('.scrollspy').scrollSpy();
-      });
-    </script>
+
+    <!-- build:js /static/javascript/minified.js -->
+    <script src="/static/javascript/main.js"></script>
+    <!-- endbuild -->
 
     
   </head>
+  
   <body >
     
 
-      
-        <header>
+    
+      <header>
 <ul id="about-drop" class="dropdown-content">
   <li>
     <a href="/about/">
@@ -112,6 +103,40 @@
  </div>
 </nav>
 
+<ul id="slide-out" class="sidenav">
+  <li>
+    <a href="/">
+        Home
+      </a>
+  </li>
+  <!--<li>
+    <a href="">
+        Portfolio
+      </a>
+  </li>-->
+  <li>
+    <a href="/services/">
+      Services
+    </a>
+  </li>
+  <li>
+    <a href="/about/">
+      About
+    </a>
+  </li>
+  <!--<li>
+    <a class="dropdown-trigger" href="#!" data-target="about-drop">
+      About
+    </a>
+  </li>-->
+  <li>
+    <a href="/contact/">
+      Contact
+    </a>
+   </li>
+</ul>
+<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fa fa-bars fa-lg"></i></a>
+
 
 
 
@@ -119,12 +144,12 @@
  <input type="text" name="q" placeholder="Search" id="tipue_search_input" />
 </form>-->
 <div class="box">
- <h1>
+ <h1 class="left_head">
    <a href="/" class="brand-logo">
      <img src="/static/images/nomadlogo.svg" title="Nomad Event Systems" alt="Nomad Event Systems" width="300px">
    </a>
  </h1>
- <h2>
+ <h2 class="right_head">
    <address>
      Alexandria, VA &#183; Washington D.C.
      <br>
@@ -137,9 +162,9 @@
 
 </header>
 
-      
+    
   <main>
-      
+    
   <p><a href="/venue/">View a list of all venue</a></p>
   <h1>Smithsonian National Air and Space Museum</h1>
   <ul>
@@ -169,10 +194,11 @@
   </ul>
 
   </main>
+
+  <footer>
+    
       
-        <footer>
-  
-    <ul class="sharenav center-align">
+  <ul class="sharenav">
     <li class="fb">
         <a href="https://www.facebook.com/DCEventProduction/">
             <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
@@ -195,35 +221,26 @@
     </li>
 </ul>
 
-  
-  <ul class="affilate">
-    <li>
-      <img src="/static/images/jc-footer-logo-2.png" alt="">
-    </li>
-    <li>
-      <img src="/static/images/jc-footer-logo-3.png" alt="">
-    </li>
-    <li>
-      <img src="/static/images/jc-footer-logo-4.png" alt="">
-    </li>
-    <li>
-      <img src="/static/images/jc-footer-logo-5.png" alt="">
-    </li>
-  </ul>
-</footer>
 
+<ul class="affilate">
+  <li>
+    <img src="/static/images/jc-footer-logo-2.png" alt="">
+  </li>
+  <li>
+    <img src="/static/images/jc-footer-logo-3.png" alt="">
+  </li>
+  <li>
+    <img src="/static/images/jc-footer-logo-4.png" alt="">
+  </li>
+  <li>
+    <img src="/static/images/jc-footer-logo-5.png" alt="">
+  </li>
+</ul>
+
+    
+  </footer>
       
 
-      
-      
-
-      <!-- build:js /static/javascript/minified.js -->
-      <!--<script src="/static/javascript/main.js"></script>
-      <!-- endbuild -->
-
-      
-
-      
       <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

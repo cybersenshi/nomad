@@ -36,46 +36,31 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.parallax').parallax();
-        $(".dropdown-trigger").dropdown({
-          coverTrigger: false,
-          constrainWidth: false,
-        });
-        $('.datepicker').datepicker({
-          showClearBtn: true,
-        });
-        $('select').formSelect();
-        $('.scrollspy').scrollSpy();
-      });
-    </script>
+
+    <!-- build:js /static/javascript/minified.js -->
+    <script src="/static/javascript/main.js"></script>
+    <!-- endbuild -->
 
     {% block head_extra %}{% endblock %}
   </head>
+  
   <body {% block body_attributes %}{% endblock %}>
     {% block body %}
 
-      {% block header %}
-        {% include "templates/partials/header.html" %}
-      {% endblock %}
+    {% block header %}
+      {% include "templates/partials/header.html" %}
+    {% endblock %}
   <main>
-      {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
   </main>
-      {% block footer %}
-        {% include "templates/partials/footer.html" %}
-      {% endblock %}
 
-      {# Put your JS in here and we'll minify it into one file. No CDN scripts. More info: #}
-      {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
-
-      <!-- build:js /static/javascript/minified.js -->
-      <!--<script src="/static/javascript/main.js"></script>
-      <!-- endbuild -->
-
+  <footer>
+    {% block footer %}
+      {% include "templates/partials/footer.html" %}
+    {% endblock %}
+  </footer>
       {% block scripts_extra %}{% endblock %}
 
-      {# Google Analytics code. Feel free to remove. #}
       <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
