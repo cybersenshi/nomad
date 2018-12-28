@@ -28,12 +28,19 @@
 </div>
 
 <div class="container quote">
-  <h4>
-    "I can't thank you enough for all that you did last night - it exceeded my expectations!!! Absolutely awesome. Everyone was talking about the lighting and "images" , including our director. And the fireworks - perfect! They loved it."
-  </h4>
-  - Tina Karl, Special Events Manager, Natural History Museum
-  {{ cms.testimonial.quote }}
-  {{ cms.testimonial.name }}
+  <span class="quoteholder">
+    <h4>
+      "I can't thank you enough for all that you did last night - it exceeded my expectations!!! Absolutely awesome. Everyone was talking about the lighting and "images" , including our director. And the fireworks - perfect! They loved it."
+    </h4>
+    - Tina Karl, Special Events Manager, Natural History Museum
+    {{ cms.testimonial.quote|safe }}
+    {{ cms.testimonial.name|safe }}
+  </span>
+  <script type="text/javascript">
+    $().ready(function() {
+        alert($(".quoteholder:random").text());
+    });
+  </script>
 </div>
 
 {% endblock %}
